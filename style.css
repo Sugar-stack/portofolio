@@ -17,7 +17,7 @@
     --bg: #2b2b33;
     --bg-soft: #232329;
     --surface: #2e2e38;
-    .section-kicker h2::after,
+    --ink: #f3f2f9;
     --muted: #aab2d1;
     --line: #3f3f4b;
     --accent: #606887;
