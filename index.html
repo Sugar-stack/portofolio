@@ -2,260 +2,429 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="Portfolio de Mouhamad Aly Latyr Barry, développeur web.">
-    <title>Aly — Développeur Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mouhamad Aly Latyr Barry">
+    <meta name="theme-color" content="#2b2b33">
+    <meta name="robots" content="index, follow">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mouhamad-aly-portofolio.netlify.app/">
+    <meta property="og:title" content="Mouhamad Aly — Développeur Web Freelance Premium">
+    <meta property="og:description" content="Conception et développement de sites web sur mesure qui renforcent votre image de marque et convertissent vos visiteurs.">
+    <meta property="og:image" content="https://mouhamad-aly-portofolio.netlify.app/assets/alysite.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mouhamad Aly — Développeur Web Freelance Premium">
+    <meta name="twitter:description" content="Conception et développement de sites web sur mesure qui renforcent votre image de marque et convertissent vos visiteurs.">
+    <meta name="twitter:image" content="https://mouhamad-aly-portofolio.netlify.app/assets/alysite.jpg">
+
+    <title>Mouhamad Aly — Développeur Web Freelance Premium</title>
+    <meta name="description" content="Développeur web freelance expert créant des sites web premium qui convertissent les visiteurs en clients. Spécialisé en sites vitrines, WordPress et applications web. Basé à Dakar, travaillant à distance avec des clients du monde entier.">
+    <meta name="keywords" content="développeur web freelance, portfolio, développement web, sites web premium, sites vitrines, WordPress, Python Flask, développeur Dakar, développement web international">
+    <link rel="canonical" href="https://mouhamad-aly-portofolio.netlify.app/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b2b33'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='28' fill='%23f3f2f9'%3EA%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
+    <noscript><style>.loader{display:none}.loader-progress{display:none}.reveal{opacity:1;transform:none}</style></noscript>
+    <style>html{background-color:#2b2b33}</style>
 </head>
-
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <canvas id="flow-canvas" class="flow-canvas" aria-hidden="true"></canvas>
+    <div class="flow-veil" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div id="nprogress" aria-hidden="true"><div class="bar"></div></div>
 
-    <div class="cursor"></div>
+    <div class="loader" role="status" aria-live="polite">
+        <div class="loader-mark">
+            <div class="loader-3d-wrap" aria-hidden="true">
+                <canvas id="loader-skull-canvas"></canvas>
+            </div>
+            <small>Développeur web freelance</small>
+            <div class="ghost-coder" aria-hidden="true">
+                <span class="ghost-text"></span>
+                <span class="ghost-cursor"></span>
+            </div>
+        </div>
+        <div class="loader-progress">
+            <span class="loader-percent" id="loader-percent" aria-hidden="true">0%</span>
+            <div class="loader-track"><div class="loader-fill" id="loader-fill"></div></div>
+        </div>
+    </div>
 
-    <div class="loader">
-        <span>ALY</span>
+    <div class="fullscreen-menu" id="fullscreen-menu" role="navigation" aria-label="Menu principal" aria-hidden="true">
+        <button class="menu-close" type="button" aria-label="Fermer le menu" aria-expanded="false">FERMER</button>
+        <div class="menu-decoration" aria-hidden="true"></div>
+        <ul class="menu-list">
+            <li class="menu-item" data-index="1"><a href="#accueil"><span class="menu-num">01</span><span class="menu-title-wrap"><span class="menu-title">ACCUEIL</span><svg class="title-fragments" viewBox="0 0 220 70" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;"></svg></a></li>
+            <li class="menu-item" data-index="2"><a href="#apropos"><span class="menu-num">02</span><span class="menu-title-wrap"><span class="menu-title">À PROPOS</span><svg class="title-fragments" viewBox="0 0 220 70" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;"></svg></a></li>
+            <li class="menu-item" data-index="3"><a href="#competences"><span class="menu-num">03</span><span class="menu-title-wrap"><span class="menu-title">COMPÉTENCES</span><svg class="title-fragments" viewBox="0 0 220 70" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;"></svg></a></li>
+            <li class="menu-item" data-index="4"><a href="#projets"><span class="menu-num">04</span><span class="menu-title-wrap"><span class="menu-title">RÉALISATIONS</span><svg class="title-fragments" viewBox="0 0 220 70" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;"></svg></a></li>
+            <li class="menu-item" data-index="5"><a href="#services"><span class="menu-num">05</span><span class="menu-title-wrap"><span class="menu-title">SERVICES</span><svg class="title-fragments" viewBox="0 0 220 70" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;"></svg></a></li>
+            <li class="menu-item" data-index="6"><a href="#contact"><span class="menu-num">06</span><span class="menu-title-wrap"><span class="menu-title">CONTACT</span><svg class="title-fragments" viewBox="0 0 220 70" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;"></svg></a></li>
+        </ul>
     </div>
 
     <header class="header">
-
         <a href="#accueil" class="brand">Aly<span>.</span></a>
-
-        <nav class="nav">
-            <a href="#accueil">Accueil</a>
-            <a href="#projets">Projets</a>
-            <a href="#apropos">À propos</a>
-            <a href="#contact">Contact</a>
+        <nav class="nav" id="nav" aria-label="Navigation principale">
+            <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="fullscreen-menu">
+                <span class="menu-bar bar-1"></span>
+                <span class="menu-bar bar-2"></span>
+                <span class="menu-bar bar-3"></span>
+                <span class="menu-bar bar-4"></span>
+            </button>
         </nav>
-
-        <a class="available" href="#contact">
-            <i></i> Disponible
-        </a>
-
-        <button class="menu" aria-label="Menu">
-            <span></span>
-            <span></span>
-        </button>
-
     </header>
 
-    <main>
-
+    <main id="contenu">
         <section class="hero" id="accueil">
-
-            <div class="hero-top reveal">
-                <p class="eyebrow">Développeur web —  WordPress & Elementor Pro</p>
-                <p class="hero-note">Je crée des expériences web<br>simples, rapides et mémorables.</p>
-            </div>
-
-            <div class="hero-title reveal">
-                <h1>Mouhamad Aly<br><em>Latyr Barry</em></h1>
-            </div>
-
-            <div class="hero-bottom reveal">
-                <span>HTML / CSS / JavaScript / WordPress / Python</span>
-                <a href="#projets">↓ Découvrir mon travail</a>
-            </div>
-
-        </section>
-
-        <section class="projects" id="projets">
-
-            <div class="section-intro reveal">
-
-                <div>
-                    <span class="eyebrow">Sélection</span>
-                    <h2>Projets</h2>
+            <div class="intro-wrapper">
+                <div class="intro-text">
+                    <h1 class="intro-id reveal">Hey, je suis <span class="name">Mouhamad<span class="wave-wrapper"><div class="wave"></div></span></span></h1>
+                    <h2 class="intro-id reveal">Mais vous pouvez m’appeler <span class="name">Aly<span class="wave-wrapper"><div class="wave"></div></span></span></h2>
+                    <div class="intro-roles">
+                        <p class="intro-role reveal">Je suis développeur web freelance</p>
+                        <p class="intro-role reveal">Je conçois des sites qui transforment les visiteurs en clients</p>
+                    </div>
+                    <div class="intro-links">
+                        <ul>
+                            <li class="reveal"><div class="link-wrapper"><div class="link"><a href="#projets">→ Voir mes réalisations</a></div><div class="link-underline"></div></div></li>
+                            <li class="reveal"><div class="link-wrapper"><div class="link"><a href="#apropos">→ Plus à propos de moi</a></div><div class="link-underline"></div></div></li>
+                        </ul>
+                    </div>
                 </div>
-
-                <span class="count">06</span>
-
             </div>
-
-            <div class="project-list">
-
-
-                <a href="https://alyboxinggearsn.netlify.app">
-                <article class="project reveal">
-
-                    <div class="project-visual boxing">
-
-                        <div class="mock-browser">
-
-                            <div class="browser-bar">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </div>
-
-                            <div class="boxing-content">
-                                <small>ALYBOXINGGEAR_SN</small>
-                                <strong>ÉQUIPEMENTS<br>POUR CHAMPIONS</strong>
-                                <button>Découvrir</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="project-meta">
-                        <h3>AlyBoxingGear_SN</h3>
-                        <span>Site vitrine · HTML / CSS </span>
-                        <b>↗️</b>
-                    </div>
-
-                </article>
-                </a>
-                <article class="project reveal">
-
-                    <div class="project-visual portfolio">
-
-                        <div class="portfolio-copy">
-                            <small>ALY / PORTFOLIO</small>
-                            <strong>Développeur<br><em>Web</em></strong>
-                            <span>Création digitale</span>
-                        </div>
-
-                        <div class="portfolio-orb"></div>
-
-                    </div>
-
-                    <div class="project-meta">
-                        <h3>Portfolio personnel</h3>
-                        <span>Web design · JavaScript</span>
-                        <b>↗️</b>
-                    </div>
-                
-                </article>
-
-                <article class="project reveal">
-
-                    <div class="project-visual shop">
-                        <a href="favela1.png" target="_blank">
-                            <img src="favela1.png">
-                        </a>
-                    </div>
-
-                    <div class="project-meta">
-                        <h3>La Favela Lounge</h3>
-                        <span>Site vitrine HTML / CSS</span>
-                        <b>↗️</b>
-                    </div>
-
-                </article>
-
-                <article class="project reveal">
-
-                    <div class="project-visual code">
-                        <video controls poster="gestion de file.png">
-                            <source src="déploiement.mp4" type="video/mp4">
-                            votre navigateur ne supporte pas la video
-                        </video>
-
-                    </div>
-
-                    <div class="project-meta">
-                        <h3>Gestion de file d'attente</h3>
-                        <span>Application web · HTML / CSS / Javascript</span>
-                        <b>↗️</b>
-                    </div>
-
-                </article>
-                <article class="project reveal">
-
-                    <div class="project-visual code">
-                        <video controls poster="portofoliowp.png">
-                            <source src="portofolio.mp4" type="video/mp4">
-                            votre navigateur ne supporte pas la video
-                        </video>
-
-                    </div>
-
-                    <div class="project-meta">
-                        <h3>Portofolio crée par wordpress elementor pro</h3>
-                        <span>Wordpress · Elementor / Oceanwp  </span>
-                        <b>↗️</b>
-                    </div>
-
-                </article>
-
-                <article class="project reveal">
-
-                    <div class="project-visual code">
-                        <video controls poster="genibat.png">
-                            <source src="genibat.mp4" type="video/mp4">
-                            votre navigateur ne supporte pas la video
-                        </video>
-
-                    </div>
-
-                    <div class="project-meta">
-                        <h3>site Web d'agence de construction existant reproduit avec wordpress elementor pro</h3>
-                        <span>Wordpress · Elementor / Oceanwp  </span>
-                        <b>↗️</b>
-                    </div>
-
-                </article>
-            </div>
-
         </section>
 
         <section class="about" id="apropos">
-
-            <div class="section-label reveal">À propos</div>
-
-            <div class="about-content reveal">
-
-                <h2>Je transforme une idée en <em>expérience web.</em></h2>
-
-                <p>Je suis Aly, développeur web junior. J'aime construire des interfaces modernes, propres et responsives qui donnent envie d'aller plus loin.</p>
-
-                <div class="skills">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>WordPress</span>
-                    <span>PHP</span>
-                    <span>Python</span>
+            <div class="section-kicker reveal">
+                <span class="eyebrow">01 — À propos</span>
+                <h2>Développeur web freelance spécialisé dans la création de sites professionnels qui convertissent.</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        Je suis Mouhamad Aly Latyr Barry, développeur web freelance basé à Dakar, créant des expériences web qui renforcent votre image de marque et génèrent des résultats. Je conçois et développe des solutions sur mesure qui allient esthétique élégante et performance technique.
+                    </p>
+                    <p>
+                        Mon approche se distingue par une attention méticuleuse à la structure, à la lisibilité et à l'optimisation des performances. Je crois que les sites web doivent être intuitifs, rapides et se comprendre instantanément, offrant une expérience fluide sur tous les appareils. Chaque ligne de code est écrite avec l'objectif de créer des sites qui non seulement ressemblent professionnels, mais se comportent aussi exceptionnellement bien.
+                    </p>
+                    <p>
+                        Je suis passionné par la résolution de problèmes de design et de développement, trouvant l'équilibre parfait entre compositions visuelles élégantes et solutions techniques efficaces. Mon but est de créer des sites web qui surpassent les attentes - des outils qui sont à la fois esthétiques et ultra-performants, capables de faire fonctionner n'importe quelle entreprise.
+                    </p>
                 </div>
+                <aside class="about-panel reveal">
+                    <p class="about-name">Mouhamad Aly Latyr Barry</p>
+                    <p>Développeur web freelance</p>
+                    <ul>
+                        <li>Sites vitrines & landing pages</li>
+                        <li>WordPress & Elementor Pro</li>
+                        <li>HTML / CSS / JavaScript sur mesure</li>
+                        <li>APIs Python / Flask backend</li>
+                    </ul>
+                    <a class="text-link" href="mailto:alylatyr@gmail.com">alylatyr@gmail.com</a>
+                    <p><a class="text-link" href="CV%20aly.pdf" target="_blank" rel="noopener noreferrer">Voir mon CV (PDF)</a></p>
+                </aside>
+            </div>
+        </section>
 
+        <section class="skills" id="competences">
+            <div class="section-kicker reveal">
+                <span class="eyebrow">02 — Technologies</span>
+                <h2>Expertises techniques au service de sites web performants.</h2>
+            </div>
+            <div class="skill-grid">
+                <article class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Structure sémantique, optimisation SEO et pages robustes conçues pour l'accessibilité et la maintenance à long terme.</p>
+                </article>
+                <article class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M4 12h5M15 12h5M12 4v5M12 15v5"/></svg>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Mises en page modernes, animations fluides, designs responsive et systèmes de design cohérents avec architecture CSS moderne.</p>
+                </article>
+                <article class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Interactions modernes, validation de formulaire, navigation fluide et expériences utilisateur dynamiques avec API web.</p>
+                </article>
+                <article class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16v10H4z"/><path d="M8 17v3h8v-3"/></svg>
+                    </div>
+                    <h3>WordPress</h3>
+                    <p>CMS professionnel avec Elementor Pro, développement de thèmes personnalisé et architectures headless pour contenu dynamique.</p>
+                </article>
+                <article class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4l7 4v8l-7 4-7-4V8z"/></svg>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Logique backend, automatisation et scripts. Développement d'APIs et intégration de systèmes pour applications web complètes.</p>
+                </article>
+                <article class="skill-card reveal">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 7h14v3H5zM5 14h9v3H5z"/></svg>
+                    </div>
+                    <h3>Flask</h3>
+                    <p>Développement d'APIs web, applications CRUD et intégrations de bases de données avec logique métier scalable.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects" id="projets">
+            <div class="section-intro reveal">
+                <div>
+                    <span class="eyebrow">03 — Réalisations</span>
+                    <h2>Des sites web qui démontrent expertise et qualité.</h2>
+                    <p>Une sélection de projets réels showcases les compétences en développement - des sites vitrines aux applications web complexes. Chaque réalisation reflète l'engagement à créer des expériences web premium qui convertissent et performent.</p>
+                </div>
+                <span class="count">06</span>
             </div>
 
+            <div class="project-gallery">
+                <div class="project-list">
+                    <div class="project-cube" id="project-cube" aria-label="Galerie 3D des six projets">
+                    <div class="cube-face cube-face-front" data-project-face="0">
+                <article class="project reveal">
+                    <a class="project-visual boxing" href="https://alyboxinggearsn.netlify.app" target="_blank" rel="noopener noreferrer">
+                        <div class="mock-browser">
+                            <div class="browser-bar"><i></i><i></i><i></i></div>
+                            <div class="boxing-content">
+                                <small>ALYBOXINGGEAR_SN</small>
+                                <strong>Équipements<br>pour champions</strong>
+                                <span class="mock-cta">Voir le site</span>
+                            </div>
+                        </div>
+                        <div class="project-badge">Démo en ligne</div>
+                    </a>
+                    <div class="project-meta">
+                        <div>
+                            <h3>AlyBoxingGear_SN</h3>
+                            <p>Site vitrine premium pour une marque d'équipements de boxe. Mise en page sombre haut de gamme, identité forte et navigation intuitive pour une expérience de marque exceptionnelle.</p>
+                            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Site vitrine</li></ul>
+                        </div>
+                        <a class="icon-link" href="https://alyboxinggearsn.netlify.app" target="_blank" rel="noopener noreferrer">Visiter le site →</a>
+                    </div>
+                </article>
+
+                    </div>
+                    <div class="cube-face cube-face-right" data-project-face="1">
+                <article class="project reveal">
+                    <div class="project-visual">
+                        <img src="assets/alysite.jpg" alt="Aperçu du portfolio personnel de Mouhamad Aly Latyr Barry" width="1600" height="765" loading="lazy">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3>Portfolio personnel</h3>
+                            <p>Identité, structure et interactions d’un site de présentation. Conception, intégration et mise en ligne.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                        </div>
+                    </div>
+                </article>
+
+                    </div>
+                    <div class="cube-face cube-face-back" data-project-face="2">
+                <article class="project reveal">
+                    <a class="project-visual" href="assets/favela.jpg" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/favela.jpg" alt="Aperçu du site vitrine La Favela Lounge" width="1600" height="810" loading="lazy">
+                    </a>
+                    <div class="project-meta">
+                        <div>
+                            <h3>La Favela Lounge</h3>
+                            <p>Site vitrine pour un lounge : atmosphère visuelle, hiérarchie claire et mise en page adaptée à une présentation d’établissement.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>Site vitrine</li></ul>
+                        </div>
+                        <a class="icon-link" href="assets/favela.jpg" target="_blank" rel="noopener noreferrer">Aperçu visuel</a>
+                    </div>
+                </article>
+
+                    </div>
+                    <div class="cube-face cube-face-left" data-project-face="3">
+                <article class="project reveal">
+                    <div class="project-visual media">
+                        <video controls preload="none" poster="assets/queue.jpg">
+                            <source src="déploiement.mp4" type="video/mp4">
+                            Votre navigateur ne prend pas en charge la vidéo.
+                        </video>
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3>Gestion de file d’attente</h3>
+                            <p>Application web destinée à organiser une file d’attente. Interface et logique côté navigateur, démonstration en vidéo.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                        </div>
+                    </div>
+                </article>
+
+                    </div>
+                    <div class="cube-face cube-face-top" data-project-face="4">
+                <article class="project reveal">
+                    <div class="project-visual media">
+                        <video controls preload="none" poster="assets/portofoliowp.jpg">
+                            <source src="Portofolio.mp4" type="video/mp4">
+                            Votre navigateur ne prend pas en charge la vidéo.
+                        </video>
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3>Portfolio WordPress</h3>
+                            <p>Portfolio réalisé avec WordPress, Elementor Pro et OceanWP. Mise en page personnalisée et structure de contenu éditable.</p>
+                            <ul class="tags"><li>WordPress</li><li>Elementor Pro</li><li>OceanWP</li></ul>
+                        </div>
+                    </div>
+                </article>
+
+                    </div>
+                    <div class="cube-face cube-face-bottom" data-project-face="5">
+                <article class="project reveal">
+                    <div class="project-visual media">
+                        <video controls preload="none" poster="assets/genibat.jpg">
+                            <source src="genibat.mp4" type="video/mp4">
+                            Votre navigateur ne prend pas en charge la vidéo.
+                        </video>
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3>Agence de construction — reproduction WordPress</h3>
+                            <p>Reproduction d’un site d’agence existant avec WordPress et Elementor Pro, pour travailler fidélité visuelle et structure.</p>
+                            <ul class="tags"><li>WordPress</li><li>Elementor Pro</li><li>OceanWP</li></ul>
+                        </div>
+                    </div>
+                </article>
+                    </div>
+                </div>
+                </div>
+                <div class="project-cube-controls" aria-label="Navigation des projets">
+                    <button class="cube-arrow" type="button" data-cube-previous aria-label="Projet précédent">←</button>
+                    <div class="cube-indicators" role="group" aria-label="Choisir un projet">
+                        <button class="cube-indicator" type="button" data-cube-index="0" aria-label="Projet 1 : AlyBoxingGear_SN" aria-current="true"></button>
+                        <button class="cube-indicator" type="button" data-cube-index="1" aria-label="Projet 2 : Portfolio personnel"></button>
+                        <button class="cube-indicator" type="button" data-cube-index="2" aria-label="Projet 3 : La Favela Lounge"></button>
+                        <button class="cube-indicator" type="button" data-cube-index="3" aria-label="Projet 4 : Gestion de file d’attente"></button>
+                        <button class="cube-indicator" type="button" data-cube-index="4" aria-label="Projet 5 : Portfolio WordPress"></button>
+                        <button class="cube-indicator" type="button" data-cube-index="5" aria-label="Projet 6 : Agence de construction"></button>
+                    </div>
+                    <button class="cube-arrow" type="button" data-cube-next aria-label="Projet suivant">→</button>
+                </div>
+                <p class="visually-hidden" data-cube-status aria-live="polite">Projet 1 sur 6 : AlyBoxingGear_SN</p>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="section-kicker reveal">
+                <span class="eyebrow">04 — Services</span>
+                <h2>Des prestations claires, du premier visuel au site livré.</h2>
+            </div>
+            <div class="service-grid">
+                <article class="service-card reveal">
+                    <span class="service-index">01</span>
+                    <h3>Landing pages professionnelles</h3>
+                    <p>Pages d'atterrissage haute conversion conçues pour convertir les visiteurs en leads qualifiés. Design axé sur les résultats avec appels à l'action stratégiques.</p>
+                    <a class="text-link" href="#contact">Créer une page gagnante</a>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-index">02</span>
+                    <h3>Sites web multipages</h3>
+                    <p>Sites complets et professionnels avec navigation intuitive, architecture solide et design cohérent qui renforce votre marque.</p>
+                    <a class="text-link" href="#contact">Construire mon site</a>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-index">03</span>
+                    <h3>Intégration responsive HTML, CSS, JS</h3>
+                    <p>Transformation de designs en pages web performantes avec mise en page moderne, animations fluides et compatibilité mobile.</p>
+                    <a class="text-link" href="#contact">Intégrer mon design</a>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-index">04</span>
+                    <h3>WordPress sur mesure</h3>
+                    <p>Solutions WordPress professionnelles avec Elementor Pro, CMS personnalisé et designs sur mesure qui vous donnent le contrôle total.</p>
+                    <a class="text-link" href="#contact">Optimiser WordPress</a>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-index">05</span>
+                    <h3>Fonctionnalités Python &amp; Flask</h3>
+                    <p>Développement d'applications web backend robustes avec logique métier, APIs et intégrations de données pour résoudre des problèmes complexes.</p>
+                    <a class="text-link" href="#contact">Ajouter de la puissance backend</a>
+                </article>
+            </div>
         </section>
 
         <section class="contact" id="contact">
-
-            <div class="section-label reveal">Contact</div>
-
-            <div class="contact-content reveal">
-
-                <p>Un projet en tête ?</p>
-
-                <a href="mailto:alylatyr@gmail.com">Parlons-en<span>↗️</span></a>
-
-                <div class="contact-links">
-                    <a href="https://wa.me/221707216986?text=Bonjour%20Aly%2C%20je%20viens%20de%20voir%20votre%20portfolio">Whatsapp ↗️</a>
-                    <a href="https://www.instagram.com/sugar_ray_leo_25/?__pwa=1">Instagram ↗️</a>
-                    <a href="https://www.upwork.com/freelancers/~01a89dc89fbc6f9676?mp_source=share">Upwork ↗️</a>
-                    <a href="https://github.com/Sugar-stack">Github ↗️</a>
-                </div>
-
+            <div class="section-kicker reveal">
+                <span class="eyebrow">05 — Contact</span>
+                <h2>Prêt à créer votre site web premium ?</h2>
+                <p>Discutons de votre projet. Je propose une consultation gratuite pour comprendre vos besoins et vous proposer la solution parfaite. Contactez-moi directement via email, WhatsApp ou remplissez le formulaire pour démarrer.</p>
             </div>
 
-        </section>
+            <div class="contact-layout">
+                <div class="contact-card reveal">
+                    <a class="mail-hero" href="mailto:alylatyr@gmail.com">alylatyr@gmail.com</a>
+                    <div class="contact-links">
+                        <a href="https://wa.me/221707216986?text=Bonjour%20Aly%2C%20je%20viens%20de%20voir%20votre%20portfolio" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        <a href="https://www.upwork.com/freelancers/~01a89dc89fbc6f9676?mp_source=share" target="_blank" rel="noopener noreferrer">Upwork</a>
+                        <a href="https://github.com/Sugar-stack" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
 
+                <form class="contact-form reveal" id="contact-form" novalidate>
+                    <p class="form-note">Formulaire de contact direct : cliquez sur "Envoyer le message" pour ouvrir votre application email avec mes informations pré-remplies.</p>
+                    <label>
+                        Nom complet
+                        <input type="text" name="name" autocomplete="name" required>
+                    </label>
+                    <label>
+                        Adresse email
+                        <input type="email" name="email" autocomplete="email" required>
+                    </label>
+                    <label>
+                        Votre projet
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                    <button class="btn btn-primary" type="submit">Envoyer le message</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <span>©️ 2026 Aly — Mouhamad Aly Latyr Barry</span>
-        <span>Créé avec HTML · CSS · JavaScript</span>
+        <div class="footer-brand">
+            <a href="#accueil" class="brand">Aly<span>.</span></a>
+            <p>Développeur web freelance — sites, WordPress, Python &amp; Flask.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Pied de page">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-meta">
+            <span>© 2026 Mouhamad Aly Latyr Barry</span>
+            <span>Créé avec HTML · CSS · JavaScript</span>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <button class="scroll-top" aria-label="Retour en haut" type="button">↑</button>
 
+    <script src="flow.js"></script>
+    <script type="importmap">
+        {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}
+    </script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
